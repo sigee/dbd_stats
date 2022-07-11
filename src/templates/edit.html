@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  </head>
+    <title>Dead By Daylight statistics</title>
+  </head>
+  <body>
+    <div class="container">
+        <h1>Dead By Daylight</h1>
+
+        {% if data %}
+        <form action="/edit/{{ data.id }}" method="post" enctype="multipart/form-data" class="row g-3">
+            <div class="col-md-4">
+                <label for="killer_type" class="form-label">Killer</label>
+                <input type="text" class="form-control" id="killer_type" name="killer" value="{{ data.killer }}">
+            </div>
+            <div class="col-md-8"></div>
+
+            <div class="col-md-6">
+                <label for="perk1" class="form-label">Perk1</label>
+                <input type="text" class="form-control" id="perk1" name="perk1" value="{{ data.perk1 }}">
+            </div>
+            <div class="col-md-6">
+                <label for="perk2" class="form-label">Perk2</label>
+                <input type="text" class="form-control" id="perk2" name="perk2" value="{{ data.perk2 }}">
+            </div>
+            <div class="col-md-6">
+                <label for="perk3" class="form-label">Perk3</label>
+                <input type="text" class="form-control" id="perk3" name="perk3" value="{{ data.perk3 }}">
+            </div>
+            <div class="col-md-6">
+                <label for="perk4" class="form-label">Perk4</label>
+                <input type="text" class="form-control" id="perk4" name="perk4" value="{{ data.perk4 }}">
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Save</button>
+            </div>
+        </form>
+        {% endif %}
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  </body>
+</html>

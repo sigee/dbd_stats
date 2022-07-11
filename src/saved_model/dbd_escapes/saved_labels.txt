@@ -1,0 +1,4 @@
+died
+disconnected
+escaped
+killed

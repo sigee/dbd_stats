@@ -1,3 +1,0 @@
-blight
-shape
-16
